@@ -43,7 +43,7 @@ h1, h2, h3, h4 {
   background-color: rgba(255, 255, 255, 0.7);
   display: inline-block;
   margin: 0px auto;
-  border: 20px solid rgba(255, 255, 255, 0.3); }
+  border: 1px solid rgba(0, 0, 0, 0.3); }
   #main h1, #main h2, #main h3, #main h4, #main p {
     padding: 20px; }
 
