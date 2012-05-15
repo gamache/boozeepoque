@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'Fletcher';
+  src: url('fonts/fletcher.eot');
+  src: local('Fletcher'), url('fonts/fletcher.ttf') format('truetype'), url('fonts/fletcher.svg#font') format('svg');
+}
+
+
+html {
+  background-color: white;
+}
+
+body {
+  width: 960px;
+  margin: 10px auto 10px auto;
+  color: black;
+  font-family: "Fletcher", sans-serif;
+  font-size: 24px;
+  position: relative;
+}
+
+a,a:active,a:visited{
+  text-decoration: none;
+  color: black;
+}
+
+//* { border: 1px solid red; }
+h1 { font-size: 436%; }
+h2 { font-size: 164%; }
+h3 { font-size: 145%; }
+h4 { font-size: 118%; }
+h1,h2,h3,h4 {
+  display: block;
+}
+
+.center { text-align: center; }
+
+#main-container {
+  padding-top: 150px;
+}
+
+#main {
+  background-color: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  margin: 0px auto;
+  border: 20px solid rgba(255, 255, 255, 0.3);
+  h1,h2,h3,h4,p {
+    padding: 20px;
+  }
+}
+
+img.redhead {
+  position: absolute;
+  left: -20%;
+  z-index: -1;
+}
+img.brunette {
+  position: absolute;
+  right: -20%;
+  z-index: -1;
+}
