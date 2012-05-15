@@ -1,7 +1,23 @@
 @font-face {
   font-family: 'Fletcher';
   src: url('fonts/fletcher.eot');
-  src: local('Fletcher'), url('fonts/fletcher.ttf') format('truetype'), url('fonts/fletcher.svg#font') format('svg');
+  src: local('Fletcher'),
+       url('fonts/fletcher.ttf') format('truetype'),
+       url('fonts/fletcher.svg#font') format('svg');
+}
+
+
+a, a:link, a:active, a:visited {
+  text-decoration: none;
+  color: #555;
+}
+
+h1 { font-size: 436%; }
+h2 { font-size: 164%; }
+h3 { font-size: 145%; }
+h4 { font-size: 118%; }
+h1,h2,h3,h4 {
+  display: block;
 }
 
 
@@ -19,25 +35,10 @@ body {
   position: relative;
 }
 
-
-a, a:link, a:active, a:visited{
-  text-decoration: none;
-  color: #555;
-}
-
-//* { border: 1px solid red; }
-h1 { font-size: 436%; }
-h2 { font-size: 164%; }
-h3 { font-size: 145%; }
-h4 { font-size: 118%; }
-h1,h2,h3,h4 {
-  display: block;
-}
-
-.center { text-align: center; }
-
 #main-container {
-  padding-top: 125px;
+  text-align: center;
+  position: relative;
+  top: 125px;
 }
 
 #main {
@@ -47,16 +48,17 @@ h1,h2,h3,h4 {
   border: 1px solid rgba(0, 0, 0, 0.3);
   h1,h2,h3,h4,p {
     padding: 20px;
+    & > div {
+      display: block;
+    }
   }
 }
 
-img.redhead {
+img.redhead, img.brunette {
   position: absolute;
-  left: -20%;
   z-index: -1;
+  width: 500px;
+  height: 630px;
 }
-img.brunette {
-  position: absolute;
-  right: -20%;
-  z-index: -1;
-}
+img.redhead  { left: -15%;  }
+img.brunette { right: -15%; }

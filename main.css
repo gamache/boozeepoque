@@ -3,18 +3,6 @@
   src: url("fonts/fletcher.eot");
   src: local("Fletcher"), url("fonts/fletcher.ttf") format("truetype"), url("fonts/fletcher.svg#font") format("svg"); }
 
-html {
-  background-color: white; }
-
-body {
-  width: 960px;
-  margin: 10px auto 10px auto;
-  color: black;
-  font-family: "Fletcher", sans-serif;
-  font-size: 24px;
-  line-height: 1.25;
-  position: relative; }
-
 a, a:link, a:active, a:visited {
   text-decoration: none;
   color: #555; }
@@ -34,11 +22,22 @@ h4 {
 h1, h2, h3, h4 {
   display: block; }
 
-.center {
-  text-align: center; }
+html {
+  background-color: white; }
+
+body {
+  width: 960px;
+  margin: 10px auto 10px auto;
+  color: black;
+  font-family: "Fletcher", sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  position: relative; }
 
 #main-container {
-  padding-top: 125px; }
+  text-align: center;
+  position: relative;
+  top: 125px; }
 
 #main {
   background-color: rgba(255, 255, 255, 0.7);
@@ -47,13 +46,17 @@ h1, h2, h3, h4 {
   border: 1px solid rgba(0, 0, 0, 0.3); }
   #main h1, #main h2, #main h3, #main h4, #main p {
     padding: 20px; }
+    #main h1 > div, #main h2 > div, #main h3 > div, #main h4 > div, #main p > div {
+      display: block; }
+
+img.redhead, img.brunette {
+  position: absolute;
+  z-index: -1;
+  width: 500px;
+  height: 630px; }
 
 img.redhead {
-  position: absolute;
-  left: -20%;
-  z-index: -1; }
+  left: -15%; }
 
 img.brunette {
-  position: absolute;
-  right: -20%;
-  z-index: -1; }
+  right: -15%; }
