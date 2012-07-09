@@ -6,6 +6,12 @@
        url('fonts/fletcher.svg#font') format('svg');
 }
 
+nav, #home, h1,h2,h3,h4, footer {
+  font-family: "Fletcher", "Century Schoolbook", "Georgia", "Palatino", serif;
+  font-size: 125%;
+}
+
+
 
 a, a:link, a:active, a:visited {
   text-decoration: none;
@@ -29,13 +35,14 @@ body {
   width: 960px;
   margin: 10px auto 10px auto;
   color: black;
-  font-family: "Fletcher", sans-serif;
-  font-size: 24px;
+  font-family: "Century Schoolbook", "Georgia", "Palatino", serif;
+  font-size: 18px;
   line-height: 1.25;
   position: relative;
 }
 
 nav {
+  font-size: 100%;
   a {
     padding: 2px;
   }
@@ -79,9 +86,3 @@ img.brunette { right: -15%; }
   margin: 20px;
 }
 
-#about {
-  ul {
-    display: inline-block;
-    text-align: left;
-  }
-}

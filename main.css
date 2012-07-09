@@ -3,6 +3,10 @@
   src: url("fonts/fletcher.eot");
   src: local("Fletcher"), url("fonts/fletcher.ttf") format("truetype"), url("fonts/fletcher.svg#font") format("svg"); }
 
+nav, #home, h1, h2, h3, h4, footer {
+  font-family: "Fletcher", "Century Schoolbook", "Georgia", "Palatino", serif;
+  font-size: 125%; }
+
 a, a:link, a:active, a:visited {
   text-decoration: none;
   color: #555; }
@@ -29,16 +33,18 @@ body {
   width: 960px;
   margin: 10px auto 10px auto;
   color: black;
-  font-family: "Fletcher", sans-serif;
-  font-size: 24px;
+  font-family: "Century Schoolbook", "Georgia", "Palatino", serif;
+  font-size: 18px;
   line-height: 1.25;
   position: relative; }
 
-nav a {
-  padding: 2px; }
-nav a.selected {
-  color: black;
-  background-color: rgba(0, 0, 0, 0.1); }
+nav {
+  font-size: 100%; }
+  nav a {
+    padding: 2px; }
+  nav a.selected {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.1); }
 
 #main-container {
   text-align: center;
@@ -71,7 +77,3 @@ img.brunette {
 
 #main > div {
   margin: 20px; }
-
-#about ul {
-  display: inline-block;
-  text-align: left; }
