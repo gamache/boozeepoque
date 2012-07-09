@@ -34,6 +34,12 @@ body {
   line-height: 1.25;
   position: relative; }
 
+nav a {
+  padding: 2px; }
+nav a.selected {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.1); }
+
 #main-container {
   text-align: center;
   position: relative;
@@ -42,6 +48,7 @@ body {
 #main {
   background-color: rgba(255, 255, 255, 0.7);
   display: inline-block;
+  width: 640px;
   margin: 0px auto;
   padding: 10px 0px;
   border: 1px solid rgba(0, 0, 0, 0.3); }
@@ -64,3 +71,7 @@ img.brunette {
 
 #main > div {
   margin: 20px; }
+
+#about ul {
+  display: inline-block;
+  text-align: left; }

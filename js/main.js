@@ -1,7 +1,12 @@
 $(function(){
   var show_section = function show_section (section) {
+    // show only this section
     $('#main > div').hide();
     $(section).show();
+
+    // mark this section as selected in the nav
+    $('nav a').removeClass('selected');
+    $('nav a[href="' + section + '"]').addClass('selected');
   };
 
   // install handlers for section links and top logo
