@@ -6,6 +6,19 @@
     %link(rel='icon' type='image/png' href='images/favicon.png')
     %link(rel='stylesheet' href='reset.css')
     %link(rel='stylesheet' href='main.css')
+    :javascript
+      // hide sections other than #home, unless JS is unavailable
+      (function(){
+        var sheet = document.styleSheets[0];
+        if (sheet.addRule) {
+          // IE
+          sheet.addRule('.hidden', 'visibility:hidden;display:none;', 0);
+        } else if (sheet.insertRule) {
+          // everyone else
+          sheet.insertRule('.hidden{visibility:hidden;display:none;}', 0);
+        }
+      })();
+
   %body
     %img.redhead(src='images/redhead-500x630.png' alt='')
     %img.brunette(src='images/brunette-500x630.png' alt='')
@@ -14,10 +27,33 @@
       #main
         %h1
           Booze &Eacute;poque
-        %h3
-          .what  boutique cocktails and spirit alchemy
-          .where cambridge, massachusetts
-        %p
+        %nav
+          %a(href='#home') home
+          |
+          %a(href='#about') about
+          |
+          %a(href='#pics') pics
+        #home
+          %h3
+            .what  boutique cocktails and spirit alchemy
+            .where cambridge, massachusetts
+        #about.hidden
+          %p lorem ipsum someshit
+          %p lorem ipsum someshit
+          %p lorem ipsum someshit
+          %p lorem ipsum someshit
+          %p lorem ipsum someshit
+          %p lorem ipsum someshit
+          %p lorem ipsum someshit
+        #pics.hidden
+          %p NERPS
+          %p lorem ipsum someshit
+          %p lorem ipsum someshit
+          %p lorem ipsum someshit
+          %p lorem ipsum someshit
+          %p lorem ipsum someshit
+          %p lorem ipsum someshit
+        %footer
           .who Meaghan and Harmony
           .links
             %a(href='mailto:events@boozeepoque.com') events@boozeepoque.com
@@ -26,6 +62,8 @@
             |
             %a(href='https://www.facebook.com/pages/Booze-%C3%89poque/335482893191739') facebook
 
+    %script(src='js/jquery-1.7.1.min.js')
+    %script(src='js/main.js')
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-31731034-1']);

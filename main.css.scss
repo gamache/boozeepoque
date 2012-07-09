@@ -45,9 +45,10 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
   display: inline-block;
   margin: 0px auto;
+  padding: 10px 0px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   h1,h2,h3,h4,p {
-    padding: 20px;
+    padding: 10px;
     & > div {
       display: block;
     }
@@ -62,3 +63,7 @@ img.redhead, img.brunette {
 }
 img.redhead  { left: -15%;  }
 img.brunette { right: -15%; }
+
+#main > div {
+  margin: 20px;
+}

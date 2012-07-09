@@ -43,9 +43,10 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
   display: inline-block;
   margin: 0px auto;
+  padding: 10px 0px;
   border: 1px solid rgba(0, 0, 0, 0.3); }
   #main h1, #main h2, #main h3, #main h4, #main p {
-    padding: 20px; }
+    padding: 10px; }
     #main h1 > div, #main h2 > div, #main h3 > div, #main h4 > div, #main p > div {
       display: block; }
 
@@ -60,3 +61,6 @@ img.redhead {
 
 img.brunette {
   right: -15%; }
+
+#main > div {
+  margin: 20px; }

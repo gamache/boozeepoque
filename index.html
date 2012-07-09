@@ -6,6 +6,21 @@
     <link href='images/favicon.png' rel='icon' type='image/png' />
     <link href='reset.css' rel='stylesheet' />
     <link href='main.css' rel='stylesheet' />
+    <script type='text/javascript'>
+      //<![CDATA[
+        // hide sections other than #home, unless JS is unavailable
+        (function(){
+          var sheet = document.styleSheets[0];
+          if (sheet.addRule) {
+            // IE
+            sheet.addRule('.hidden', 'visibility:hidden;display:none;', 0);
+          } else if (sheet.insertRule) {
+            // everyone else
+            sheet.insertRule('.hidden{visibility:hidden;display:none;}', 0);
+          }
+        })();
+      //]]>
+    </script>
   </head>
   <body>
     <img alt='' class='redhead' src='images/redhead-500x630.png' />
@@ -15,11 +30,38 @@
         <h1>
           Booze &Eacute;poque
         </h1>
-        <h3>
-          <div class='what'>boutique cocktails and spirit alchemy</div>
-          <div class='where'>cambridge, massachusetts</div>
-        </h3>
-        <p>
+        <nav>
+          <a href='#home'>home</a>
+          |
+          <a href='#about'>about</a>
+          |
+          <a href='#pics'>pics</a>
+        </nav>
+        <div id='home'>
+          <h3>
+            <div class='what'>boutique cocktails and spirit alchemy</div>
+            <div class='where'>cambridge, massachusetts</div>
+          </h3>
+        </div>
+        <div class='hidden' id='about'>
+          <p>lorem ipsum someshit</p>
+          <p>lorem ipsum someshit</p>
+          <p>lorem ipsum someshit</p>
+          <p>lorem ipsum someshit</p>
+          <p>lorem ipsum someshit</p>
+          <p>lorem ipsum someshit</p>
+          <p>lorem ipsum someshit</p>
+        </div>
+        <div class='hidden' id='pics'>
+          <p>NERPS</p>
+          <p>lorem ipsum someshit</p>
+          <p>lorem ipsum someshit</p>
+          <p>lorem ipsum someshit</p>
+          <p>lorem ipsum someshit</p>
+          <p>lorem ipsum someshit</p>
+          <p>lorem ipsum someshit</p>
+        </div>
+        <footer>
           <div class='who'>Meaghan and Harmony</div>
           <div class='links'>
             <a href='mailto:events@boozeepoque.com'>events@boozeepoque.com</a>
@@ -28,9 +70,11 @@
             |
             <a href='https://www.facebook.com/pages/Booze-%C3%89poque/335482893191739'>facebook</a>
           </div>
-        </p>
+        </footer>
       </div>
     </div>
+    <script src='js/jquery-1.7.1.min.js'></script>
+    <script src='js/main.js'></script>
     <script type='text/javascript'>
       //<![CDATA[
         var _gaq = _gaq || [];
