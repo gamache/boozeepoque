@@ -46,6 +46,9 @@ nav {
     color: black;
     background-color: rgba(0, 0, 0, 0.1); }
 
+footer {
+  margin-bottom: 20px; }
+
 #main-container {
   text-align: center;
   position: relative;
@@ -55,7 +58,7 @@ nav {
   background-color: rgba(255, 255, 255, 0.7);
   display: inline-block;
   width: 640px;
-  margin: 0px auto;
+  margin: 0px auto 20px auto;
   padding: 10px 0px;
   border: 1px solid rgba(0, 0, 0, 0.3); }
   #main h1, #main h2, #main h3, #main h4, #main p {

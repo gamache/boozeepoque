@@ -52,6 +52,10 @@ nav {
   }
 }
 
+footer {
+  margin-bottom: 20px;
+}
+
 #main-container {
   text-align: center;
   position: relative;
@@ -62,7 +66,7 @@ nav {
   background-color: rgba(255, 255, 255, 0.7);
   display: inline-block;
   width: 640px;
-  margin: 0px auto;
+  margin: 0px auto 20px auto;
   padding: 10px 0px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   h1,h2,h3,h4,p {
