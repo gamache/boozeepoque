@@ -56,10 +56,26 @@ footer {
   margin-bottom: 20px;
 }
 
+
+@mixin transition($params) {
+  -webkit-transition: $params;
+  -moz-transition: $params;
+  transition: $params;
+}
+
+.transition {
+  @include transition(top ease-in-out 0.5s);
+}
+
 #main-container {
   text-align: center;
   position: relative;
-  top: 125px;
+  top: 25px;
+//  @include transition(top ease-in-out 0.5s);
+}
+
+#main-container.home {
+  top: 125px; 
 }
 
 #main {

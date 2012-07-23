@@ -7,6 +7,14 @@ $(function(){
     // mark this section as selected in the nav
     $('nav a').removeClass('selected');
     $('nav a[href="' + section + '"]').addClass('selected');
+
+    // add section name class to #main-container
+    var section_name = section.slice(1);
+    if (! $('#main-container').hasClass(section_name)) {
+      $('#main-container').removeClass()
+                          .addClass('transition')
+                          .addClass(section_name);
+    }
   };
 
   // install handlers for section links and top logo
@@ -29,6 +37,5 @@ $(function(){
 
   // remove initial .hidden from non-#home sections
   $('#main > div').removeClass('hidden');
-
 
 });

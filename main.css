@@ -49,9 +49,17 @@ nav {
 footer {
   margin-bottom: 20px; }
 
+.transition {
+  -webkit-transition: top ease-in-out 0.5s;
+  -moz-transition: top ease-in-out 0.5s;
+  transition: top ease-in-out 0.5s; }
+
 #main-container {
   text-align: center;
   position: relative;
+  top: 25px; }
+
+#main-container.home {
   top: 125px; }
 
 #main {
