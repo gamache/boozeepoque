@@ -80,3 +80,14 @@ img.brunette {
 
 #main > div {
   margin: 20px; }
+
+#testimonials {
+  text-align: left; }
+  #testimonials .testimonial {
+    display: block;
+    clear: both;
+    margin: 10px 20px 40px 20px; }
+    #testimonials .testimonial .by {
+      margin: 10px 0px 40px 40px;
+      font-weight: bold;
+      font-style: italic; }
