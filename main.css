@@ -89,6 +89,11 @@ img.brunette {
 #main > div {
   margin: 20px; }
 
+#about img.ladies {
+  width: 343px;
+  height: 343px;
+  margin: 10px auto; }
+
 #testimonials {
   text-align: left; }
   #testimonials .testimonial {
