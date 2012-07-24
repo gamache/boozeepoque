@@ -107,10 +107,20 @@ img.brunette { right: -15%; }
 }
 
 #about {
-  img.ladies {
-    width: 343px;
-    height: 343px;
+  img.ginger {
+    width: 600px;
+    height: 450px;
     margin: 10px auto;
+  }
+  img.ladies {
+    width: 600px;
+    height: 600px;
+    margin: 10px auto;
+  }
+  ul.right, ul.left {
+    display: inline-block;
+    width: 40%;
+    margin: 10px 0px 20px 0px;
   }
 }
 

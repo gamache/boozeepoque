@@ -89,10 +89,18 @@ img.brunette {
 #main > div {
   margin: 20px; }
 
-#about img.ladies {
-  width: 343px;
-  height: 343px;
+#about img.ginger {
+  width: 600px;
+  height: 450px;
   margin: 10px auto; }
+#about img.ladies {
+  width: 600px;
+  height: 600px;
+  margin: 10px auto; }
+#about ul.right, #about ul.left {
+  display: inline-block;
+  width: 40%;
+  margin: 10px 0px 20px 0px; }
 
 #testimonials {
   text-align: left; }
