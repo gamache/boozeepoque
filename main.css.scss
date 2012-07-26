@@ -124,6 +124,20 @@ img.brunette { right: -15%; }
   }
 }
 
+#blog {
+  text-align: left;
+  .date {
+    text-align: center;
+    font-size: 90%;
+  }
+  .tumblr-post {
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #999;
+    margin: 10px 10px 10px 10px;
+  }
+}
+
 #testimonials {
   text-align: left;
 

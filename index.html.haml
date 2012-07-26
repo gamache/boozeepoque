@@ -33,6 +33,8 @@
           |
           %a(href='#about') about
           |
+          %a(href='#blog') blog
+          |
           %a(href='#testimonials') testimonials
 
         #home
@@ -96,6 +98,9 @@
             <a href='tel:1-857-600-1323'>857-600-1323</a>.
           %p &nbsp;
 
+        #blog.hidden
+
+
         #testimonials.hidden
           .testimonial
             %blockquote
@@ -154,7 +159,11 @@
 
     %script(src='js/jquery-1.7.1.min.js')
     %script(src='js/main.js')
+    %script(src='js/tumblr-feedeater.js')
+    %script(src='http://boozeepoque.tumblr.com/api/read/json')
     :javascript
+      FEEDEATER.render_posts({target: '#blog'});
+
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-31731034-1']);
       _gaq.push(['_setDomainName', 'boozeepoque.com']);

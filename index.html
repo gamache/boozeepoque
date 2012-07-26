@@ -35,6 +35,8 @@
           |
           <a href='#about'>about</a>
           |
+          <a href='#blog'>blog</a>
+          |
           <a href='#testimonials'>testimonials</a>
         </nav>
         <div id='home'>
@@ -60,7 +62,7 @@
             beverages using fresh, seasonal ingredients for an array of
             parties and events.
           </p>
-          <img class='ginger' src='images/ginger-600x450.jpg' />
+          <img alt='Candied ginger, fresh sage, watermelon, and citrus' class='ginger' src='images/ginger-600x450.jpg' />
           <p>
             Driven by a desire to create splendid libations Meaghan and
             Harmony began experimenting with recipes focusing on strength
@@ -70,7 +72,7 @@
             that delivers farm-to-table cocktail service directly to their
             clients.
           </p>
-          <img class='ladies' src='images/be-ladies-600x600.jpg' />
+          <img alt='Harmony and Meaghan' class='ladies' src='images/be-ladies-600x600.jpg' />
           <p>
             They are available for a wide range of events from garden
             soirées to art openings to black tie affairs to record release
@@ -109,6 +111,7 @@
           </p>
           <p>&nbsp;</p>
         </div>
+        <div class='hidden' id='blog'></div>
         <div class='hidden' id='testimonials'>
           <div class='testimonial'>
             <blockquote>
@@ -176,8 +179,12 @@
     </div>
     <script src='js/jquery-1.7.1.min.js'></script>
     <script src='js/main.js'></script>
+    <script src='js/tumblr-feedeater.js'></script>
+    <script src='http://boozeepoque.tumblr.com/api/read/json'></script>
     <script type='text/javascript'>
       //<![CDATA[
+        FEEDEATER.render_posts({target: '#blog'});
+        
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-31731034-1']);
         _gaq.push(['_setDomainName', 'boozeepoque.com']);
