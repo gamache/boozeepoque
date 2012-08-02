@@ -104,14 +104,17 @@ img.brunette {
 
 #blog {
   text-align: left; }
-  #blog .date {
+  #blog h2.title {
     text-align: center;
+    background-color: rgba(200, 200, 200, 0.3); }
+  #blog .date {
+    text-align: right;
+    font-style: italic;
     font-size: 90%; }
   #blog .tumblr-post {
-    position: relative;
     padding-bottom: 20px;
     border-bottom: 1px dotted #999;
-    margin: 10px 10px 10px 10px; }
+    margin: 10px; }
 
 #testimonials {
   text-align: left; }
