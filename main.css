@@ -88,6 +88,8 @@ img.brunette {
 
 #main > div {
   margin: 20px; }
+  #main > div a {
+    text-decoration: underline; }
 
 #about img.ginger {
   width: 600px;
