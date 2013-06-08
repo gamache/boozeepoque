@@ -2,29 +2,26 @@
 <html>
   <head>
     <title>Booze &Eacute;poque</title>
-    <meta charset='UTF-8' />
-    <link href='images/favicon.png' rel='icon' type='image/png' />
-    <link href='reset.css' rel='stylesheet' />
-    <link href='main.css' rel='stylesheet' />
-    <script type='text/javascript'>
-      //<![CDATA[
-        // hide sections other than #home, unless JS is unavailable
-        (function(){
-          var sheet = document.styleSheets[0];
-          if (sheet.addRule) {
-            // IE
-            sheet.addRule('.hidden', 'visibility:hidden;display:none;', 0);
-          } else if (sheet.insertRule) {
-            // everyone else
-            sheet.insertRule('.hidden{visibility:hidden;display:none;}', 0);
-          }
-        })();
-      //]]>
+    <meta charset='UTF-8'>
+    <link href='images/favicon.png' rel='icon' type='image/png'>
+    <link href='main.css' rel='stylesheet'>
+    <script>
+      // hide sections other than #home, unless JS is unavailable
+      (function(){
+        var sheet = document.styleSheets[0];
+        if (sheet.addRule) {
+          // IE
+          sheet.addRule('.hidden', 'visibility:hidden;display:none;', 0);
+        } else if (sheet.insertRule) {
+          // everyone else
+          sheet.insertRule('.hidden{visibility:hidden;display:none;}', 0);
+        }
+      })();
     </script>
   </head>
   <body>
-    <img alt='' class='redhead' src='images/redhead-500x630.png' />
-    <img alt='' class='brunette' src='images/brunette-500x630.png' />
+    <img alt='' class='redhead' src='images/redhead-500x630.png'>
+    <img alt='' class='brunette' src='images/brunette-500x630.png'>
     <div class='home' id='main-container'>
       <div id='main'>
         <h1>
@@ -44,7 +41,7 @@
             <div class='what'>boutique cocktails and spirit alchemy</div>
             <div class='where'>cambridge, massachusetts</div>
           </h3>
-          <br />
+          <br>
         </div>
         <div class='hidden' id='about'>
           <p>
@@ -87,7 +84,7 @@
             </blockquote>
             <div class='by'>
               Jade Sylvan
-              <br />
+              <br>
               poet, francophile, booze connoisseur
             </div>
           </div>
@@ -143,21 +140,19 @@
     <script src='js/main.js'></script>
     <script src='js/tumblr-feedeater.js'></script>
     <script src='http://boozeepoque.tumblr.com/api/read/json?num=50'></script>
-    <script type='text/javascript'>
-      //<![CDATA[
-        FEEDEATER.render_posts({target: '#blog'});
-        
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-31731034-1']);
-        _gaq.push(['_setDomainName', 'boozeepoque.com']);
-        _gaq.push(['_trackPageview']);
-        
-        (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-      //]]>
+    <script>
+      FEEDEATER.render_posts({target: '#blog'});
+      
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31731034-1']);
+      _gaq.push(['_setDomainName', 'boozeepoque.com']);
+      _gaq.push(['_trackPageview']);
+      
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
     </script>
   </body>
 </html>
