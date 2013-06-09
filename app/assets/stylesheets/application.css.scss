@@ -107,6 +107,7 @@ img.brunette { right: -15%; }
 
 #main > div {
   margin: 20px;
+  margin-bottom: 40px;
   a {
     text-decoration: underline;
   }
@@ -149,9 +150,18 @@ img.brunette { right: -15%; }
     padding-bottom: 20px;
     border-bottom: 1px dotted #999;
     margin: 10px;
-    img {
-      display: block;
-      margin: 0 auto;
+  }
+}
+
+#menus {
+  dl {
+    margin-top: 20px;
+    dt {
+      font-weight: bold;
+    }
+    dd {
+      font-style: italic;
+      margin-bottom: 20px;
     }
   }
 }
