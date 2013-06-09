@@ -89,6 +89,10 @@
     :javascript
       FEEDEATER.render_posts({target: '#blog'});
 
+    %script(src='http://beevents.tumblr.com/api/read/json?num=50')
+    :javascript
+      FEEDEATER.render_posts({target: '#events'});
+
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-31731034-1']);
       _gaq.push(['_setDomainName', 'boozeepoque.com']);
