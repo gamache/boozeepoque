@@ -135,7 +135,8 @@ img.brunette { right: -15%; }
   }
 }
 
-#main > #blog {
+#main > #blog,
+#main > #events {
   text-align: left;
   h2.title {
     text-align: center;
@@ -150,6 +151,12 @@ img.brunette { right: -15%; }
     padding-bottom: 20px;
     border-bottom: 1px dotted #999;
     margin: 10px;
+  }
+}
+
+#main > #classes {
+  .event {
+    margin: 10px auto;
   }
 }
 

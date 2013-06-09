@@ -39,7 +39,9 @@
           |
           %a(href='#menus') menus
           |
-          %a(href='#events') events/classes
+          %a(href='#events') events
+          |
+          %a(href='#classes') classes
           |
           %a(href='#faq') faq
           |
@@ -65,6 +67,8 @@
 
         // filled in by feedeater
         #events.hidden
+
+        = render partial: 'classes'
 
         = render partial: 'faq'
 
