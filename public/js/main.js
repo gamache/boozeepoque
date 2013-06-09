@@ -46,7 +46,7 @@ $(function(){
   window.onpopstate = handle_popstate;
 
   // install handlers for section links and top logo
-  $('nav a').click(function(){
+  $('nav a, a.to_section').click(function(){
     var section = this.getAttribute('href').slice(1);  // discard leading '#'
     history.pushState({section: section}, '', '#'+section);
     show_section(section);
