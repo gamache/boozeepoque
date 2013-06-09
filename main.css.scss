@@ -29,7 +29,7 @@ h1,h2,h3,h4 {
 
 
 html {
-  background-color: white;
+  background-color: #fcfcfc;
 }
 
 body {
@@ -75,12 +75,14 @@ footer {
 }
 
 #main-container.home {
-  top: 80px; 
+  top: 80px;
 }
 
 #main {
   background-color: rgba(255, 255, 255, 0.9);
   display: inline-block;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
   width: 640px;
   margin: 0px auto 20px auto;
   padding: 10px 0px;
@@ -142,6 +144,10 @@ img.brunette { right: -15%; }
     padding-bottom: 20px;
     border-bottom: 1px dotted #999;
     margin: 10px;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
   }
 }
 
