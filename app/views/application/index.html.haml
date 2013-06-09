@@ -1,0 +1,149 @@
+!!! 5
+%html
+  %head
+    %title Booze &Eacute;poque
+    %meta(charset='UTF-8')
+    %link(rel='icon' type='image/png' href='images/favicon.png')
+    =stylesheet_link_tag :application
+    //%link(rel='stylesheet' href='main.css')
+    :javascript
+      // hide sections other than #home, unless JS is unavailable
+      (function(){
+        var sheet = document.styleSheets[0];
+        if (sheet.addRule) {
+          // IE
+          sheet.addRule('.hidden', 'visibility:hidden;display:none;', 0);
+        } else if (sheet.insertRule) {
+          // everyone else
+          sheet.insertRule('.hidden{visibility:hidden;display:none;}', 0);
+        }
+      })();
+
+  %body
+    %img.redhead(src='images/redhead-500x630.png' alt='')
+    %img.brunette(src='images/brunette-500x630.png' alt='')
+
+    #main-container.home
+      #main
+        %h1
+          Booze &Eacute;poque
+
+        %nav
+          %a(href='#home') home
+          |
+          %a(href='#about') about
+          |
+          %a(href='#blog') blog
+          |
+          %a(href='#testimonials') testimonials
+
+        #home
+          %h3
+            .what  boutique cocktails and spirit alchemy
+            .where cambridge, massachusetts
+          %br
+
+        #about.hidden
+          %p
+            Booze Époque, a boutique bartending service in the Greater Boston area, creates whimsical cocktails using local, organic, and seasonal ingredients for private parties and special events.
+
+          %p
+            Meaghan Q. Sinclair and Harmony Dawn, Booze Époque’s founders, have brought their craft to desert enclaves, garden parties, art galleries, rock shows, hoedowns, dinner soirées, holiday affairs, bachelorette parties, weddings and beyond. 
+
+          %p
+            Using handcrafted syrups, garnishes, shrubs, bitters, and tinctures along with fresh ingredients and high quality spirits, Booze Époque ensures you and your guests will enjoy the most beautiful flavors the season has to offer. 
+
+          %p
+            BÉ encourages creative collaboration with our clients and can work within a wide price range. Each party is customized and tailored to your needs and desires. 
+
+          %p
+            In addition to special event catering, Booze Époque is available for beverage menu consultation, signature drink creation, and private craft cocktail workshops and parties.
+
+          %p
+            BÉ is insured with both Liquor and General Liability Insurance, and Meaghan and Harmony are TIPS and ServSafe Manager certified. 
+
+          %p
+            Email Meaghan and Harmony with questions or event inquiries at:
+            %a(href="mailto:events@boozeepoque.com") events@boozeepoque.com
+            or call
+            <a href="tel:857-600-1323">857-600-1323</a>.
+
+          %p &nbsp;
+
+        #blog.hidden
+
+
+        #testimonials.hidden
+          .testimonial
+            %blockquote
+              Booze Époque effectively realizes a tricky vibe &mdash; half 
+              nostalgic romance, half meta-aware postmodern inside joke. 
+              Fortunately, after a few of their creative, hand-sculpted 
+              cocktails, you won't want to think about that intellectual 
+              stuff too much. I feel justified in conjecturing that if 
+              Matisse were alive today, Matisse would hire BÉ for all of 
+              his soir&eacute;e-ing needs.
+            .by
+              Jade Sylvan
+              %br
+              poet, francophile, booze connoisseur
+
+          .testimonial
+            %blockquote
+              Harmony &amp; Meaghan of Booze Époque created near-magical 
+              cocktails for my party. They were truly inspired, creative, 
+              and tasty. The founders exuded a warmth, friendliness, and 
+              enthusiasm for their work and the event. It was pleasure to 
+              have them. Beyond their wonderful drinks, it's the whole package
+              and vibe of Booze  Époque that's outstanding.
+            .by Samantha Milowsky
+
+          .testimonial
+            %blockquote
+              The divinely inspired ladies of Booze Époque were a tremendous 
+              hit at our last soirée.  They captured the essence of the 
+              evening in tasty and refreshing concoctions.  Fresh new takes
+              on old standards, innovative new flavors, and enchanting 
+              service.  Simply wonderful!
+            .by Adam Smith
+
+          .testimonial
+            %blockquote
+              Hiring the ladies of Booze Epoque brings a level of fun and class to any event. Meaghan
+              and Harmony are not only amazing mixologists but also have a lovely spirit that adds to the
+              festivities. We had discussed, ahead of time, the cocktails that I wanted to serve and they
+              took them to the highest level with their innovative, fresh ideas. Booze Époque catered at my
+              backyard barbecue and all my guests are still talking about the cocktails and service 3 weeks
+              later. They not only provided delicious drinks for the adult guests but also created, on the fly,
+              fun mocktails for the kids that attended. Meaghan and Harmony have that perfect combination
+              of knowledge, taste and joie de vivre that is a must-have for any party.
+            .by Sean Haire
+
+        %footer
+          .who Meaghan and Harmony
+          .links
+            %a(href='mailto:events@boozeepoque.com' target='_blank') events@boozeepoque.com
+            |
+            %a(href='http://twitter.com/#!/boozeepoque' target='_blank') @boozeepoque
+            |
+            %a(href='https://www.facebook.com/pages/Booze-%C3%89poque/335482893191739' target='_blank') facebook
+      &nbsp;
+
+    %script(src='js/jquery-1.7.2.min.js')
+    %script(src='js/main.js')
+    %script(src='js/tumblr-feedeater.js')
+    %script(src='http://boozeepoque.tumblr.com/api/read/json?num=50')
+    :javascript
+      FEEDEATER.render_posts({target: '#blog'});
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31731034-1']);
+      _gaq.push(['_setDomainName', 'boozeepoque.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
