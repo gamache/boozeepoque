@@ -117,7 +117,7 @@ img.brunette { right: -15%; }
   }
 }
 
-#about {
+#main > #about {
   img.ginger {
     width: 600px;
     height: 450px;
@@ -135,7 +135,7 @@ img.brunette { right: -15%; }
   }
 }
 
-#blog {
+#main > #blog {
   text-align: left;
   h2.title {
     text-align: center;
@@ -153,7 +153,7 @@ img.brunette { right: -15%; }
   }
 }
 
-#menus {
+#main > #menus {
   dl {
     margin-top: 20px;
     dt {
@@ -166,7 +166,19 @@ img.brunette { right: -15%; }
   }
 }
 
-#testimonials {
+#main > #vendors {
+  a {
+    display: block;
+    text-decoration: none;
+    margin: 10px auto;
+  }
+  .title {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+}
+
+#main > #testimonials {
   text-align: left;
 
   .testimonial {
