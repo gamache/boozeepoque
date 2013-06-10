@@ -1,2 +1,32 @@
 #contact.hidden
-  
+  %p
+    If you have questions about Booze Époque’s services or to schedule a
+    private class please contact us at
+    <a target='_blank' href='events@boozeepoque.com'>events@boozeepoque.com</a>.
+
+  %p
+    If you would
+    like to hire us for a specific event please fill out the inquiry form
+    below. Once we receive your form we will contact you via email to discuss
+    additional details.
+
+  = form_for @event_inquiry, url: event_inquiry_path do |f|
+    = f.label :name, 'Name'
+    = f.text_field :name
+
+    Business/Company
+    Email Address
+    Phone Number
+    Date of Event
+    Type of Event
+    Venue (if known)
+    Event Time
+    Number of Hours Requiring Booze Époque Services (between 2-5)
+    Number of Attendees
+    Do you plan to have a cash bar or open bar?
+    How many specialty drinks would you like us to create (menus typically range from 2 - 10 different drinks)?
+    Is there a specific budget you're working within?
+    Will you be serving beer and wine?
+    Event Description (please tell us a little bit more about the nature of your event)
+    Bar Set-up (please let us know if you have specific needs for bar set-up or have knowledge of the room 
+    layout)
