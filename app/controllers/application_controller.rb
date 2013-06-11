@@ -5,6 +5,23 @@ class ApplicationController < ActionController::Base
 
   def index
     @event_inquiry = EventInquiry.new
+    @photos = %w( babeation.jpg julep.jpg smokinboles.jpg
+                  battedlashes.jpg kitchensurfing.jpg solsticepunch.jpg
+                  bloodorangedrink.jpg launchharmpour.jpg starsatnight.jpg
+                  bostondotcomdrink.jpg lingosmenu.jpg strawberryholly.jpg
+                  cognaccompharm.jpg lingossetup.jpg swaneebday.jpg
+                  cognaccompmeg.jpg manhattan.jpg swirlandslice.jpg
+                  donjuliocomp.jpg milowsky.jpg tableandtulipmh.jpg
+                  equinoxpunch.jpg mojitos.jpg tikinight.png
+                  equinoxpunch2.jpg molassesrocker.jpg tomwaitsdrink.jpg
+                  freshmint.jpg morninggloryfarm.jpg tools.jpg
+                  grapefruitpunch.jpg noreaster.jpg ttginpour.jpg
+                  haireparty.jpg peachykeen.jpg ttinvite.jpg
+                  halloween.jpg picklebacktoast.jpg ttmenu.png
+                  harmcognac.jpg porchdrink.jpg virginwatermelon.jpg
+                  herbgarden.jpg robertsshower.jpg watermelonmarg.jpg
+                  hoedown.jpg singriaandlemonade.jpg
+                  hoedownmenu.jpg slutcrackersweet.jpg )
   end
 
   def event_inquiry
