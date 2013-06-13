@@ -1,5 +1,8 @@
 #photos.hidden
+
   #carousel-photo
-  %ul#carousel.elastislide-carousel
+    &nbsp;
+
+  %ul#carousel.elastislide-list
     = raw @photos.shuffle.map{|file| %Q{<li><img src="/images/gallery/thumbs/#{file}" data-image="/images/gallery/#{file}" alt="#{file}"></li>} }.join("\n")
 

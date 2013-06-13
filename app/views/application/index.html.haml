@@ -86,6 +86,7 @@
 
     %script(src='js/jquery-1.7.2.min.js')
     %script(src='js/main.js')
+
     %script(src='js/jquery.easing.1.3.js')
     %script(src='js/jquery.elastislide.js')
     :javascript
@@ -99,12 +100,15 @@
           $photo.html('<img src="' + img_elt.getAttribute('data-image') + '" />');
           $thumbs.removeClass('selected');
           $(img_elt).addClass('selected');
-        };
+        }
+        function next_photo(img_elt) {
+          var next = img_elt.parent().next();
+          if (next) change_photo(next.children().slice(0,1));
+        }
 
         $carousel.elastislide();
 
         $('#carousel img').click(function (event) {
-          console.log('onclick bitch');
           change_photo(event.target);
         });
 
