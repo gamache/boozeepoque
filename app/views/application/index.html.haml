@@ -18,6 +18,10 @@
         }
       })();
 
+    // wish I could have kept this at the bottom
+    %script(src='js/jquery-1.7.2.min.js')
+    %script(src='js/galleria-1.2.9.min.js')
+
   %body
     %img.redhead(src='images/redhead-500x630.png' alt='')
     %img.brunette(src='images/brunette-500x630.png' alt='')
@@ -84,35 +88,7 @@
             %a(href='https://www.facebook.com/pages/Booze-%C3%89poque/335482893191739' target='_blank') facebook
       &nbsp;
 
-    %script(src='js/jquery-1.7.2.min.js')
     %script(src='js/main.js')
-
-    %script(src='js/jquery.easing.1.3.js')
-    %script(src='js/jquery.elastislide.js')
-    :javascript
-
-      (function(){
-        var $photo = $('#carousel-photo'),
-            $carousel = $('#carousel'),
-            $thumbs = $carousel.children();
-
-        function change_photo (img_elt) {
-          $photo.html('<img src="' + img_elt.getAttribute('data-image') + '" />');
-          $thumbs.removeClass('selected');
-          $(img_elt).addClass('selected');
-        }
-        function next_photo(img_elt) {
-          var next = img_elt.parent().next();
-          if (next) change_photo(next.children().slice(0,1));
-        }
-
-        $carousel.elastislide();
-
-        $('#carousel img').click(function (event) {
-          change_photo(event.target);
-        });
-
-      })();
 
 
     %script(src='js/tumblr-feedeater.js')

@@ -1,8 +1,27 @@
 #photos.hidden
 
-  #carousel-photo
-    &nbsp;
+  #galleria
+    = raw @photos.shuffle.map{|file| %Q{<li><img src="/images/gallery/#{file}" data-image="/images/gallery/#{file}" alt="#{file}" />} }.join("\n")
 
-  %ul#carousel.elastislide-list
-    = raw @photos.shuffle.map{|file| %Q{<li><img src="/images/gallery/thumbs/#{file}" data-image="/images/gallery/#{file}" alt="#{file}"></li>} }.join("\n")
+  :javascript
+    $(function(){
+      Galleria.loadTheme('/js/galleria.classic.js');
+      Galleria.run('#galleria');
 
+      function run_when_photos_visible (fn) {
+        $('nav a.selected[href="#photos"]').each(fn);
+      }
+
+      var galleria = $('#galleria').data('galleria');
+      $(document).keyup(function(e){
+        if (e.keyCode == 37) {      // left arrow
+          console.log('hay');
+          run_when_photos_visible(function(){ galleria.prev() });
+        }
+        else if (e.keyCode == 39) { // right arrow
+          console.log('haaay');
+          run_when_photos_visible(function(){ galleria.next() });
+        }
+      });
+
+    });
