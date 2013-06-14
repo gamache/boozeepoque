@@ -1,4 +1,4 @@
-#photos.hidden
+#photos.offscreen
 
   #galleria
     = raw @photos.shuffle.map{|file| %Q{<li><img src="/images/gallery/#{file}" data-image="/images/gallery/#{file}" alt="#{file}" />} }.join("\n")
@@ -15,11 +15,9 @@
       var galleria = $('#galleria').data('galleria');
       $(document).keyup(function(e){
         if (e.keyCode == 37) {      // left arrow
-          console.log('hay');
           run_when_photos_visible(function(){ galleria.prev() });
         }
         else if (e.keyCode == 39) { // right arrow
-          console.log('haaay');
           run_when_photos_visible(function(){ galleria.next() });
         }
       });

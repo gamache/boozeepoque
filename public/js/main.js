@@ -1,7 +1,9 @@
 $(function(){
-  var show_section = function show_section (section) {
+  var first_run = true,
+      show_section = function show_section (section) {
     // show only this section
-    $('#main > div').hide();
+    $('#main > div').addClass('offscreen');
+    $('#' + section).removeClass('offscreen');
     $('#' + section).show();
 
     // mark this section as selected in the nav

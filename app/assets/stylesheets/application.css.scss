@@ -27,6 +27,11 @@ h1,h2,h3,h4 {
   display: block;
 }
 
+.offscreen {
+  position: fixed;
+  left: 9000px !important;
+  top: 0px;
+}
 
 html {
   background-color: #fcfcfc;
@@ -116,6 +121,7 @@ img.brunette { right: -15%; }
     text-decoration: underline;
   }
   img {
+    display: block;
     max-width: $main_width - 40px;
     margin: 10px auto;
   }
@@ -169,8 +175,8 @@ img.brunette { right: -15%; }
 
     background-color: rgba(255,255,255, 0.9);
   }
-
 }
+#main > #photos.offscreen > #galleria { left: 9000px; }
 
 #main > #classes {
   .event {
