@@ -16,6 +16,8 @@ class CreateEventInquiries < ActiveRecord::Migration
         how_many_specialty_drinks
         budget
         serving_beer_and_wine
+        event_description
+        bar_setup
       ).each do |col|
         t.string col
       end

@@ -1,3 +1,5 @@
+require 'pp'
+
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -25,9 +27,9 @@ class ApplicationController < ActionController::Base
   end
 
   def event_inquiry
-    @inq = EventInquiry.create(event_inquiry_params)
+    pp @inq = EventInquiry.create(event_inquiry_params)
     respond_to do |format|
-      format.html {redirect_to :index}
+      format.html {redirect_to '/'}
       format.json {render json: @inq, status: 201}
     end
   end

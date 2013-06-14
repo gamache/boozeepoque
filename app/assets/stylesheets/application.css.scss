@@ -219,4 +219,29 @@ img.brunette { right: -15%; }
   }
 }
 
+#main > #contact {
+  text-align: left;
+  p, label {
+    display: block;
+    margin: 40px 0px 10px 0px;;
+  }
 
+  input[type=text] {
+    display: inline-block;
+    width: 70%;
+    line-height: 1.5;
+    float: right;
+  }
+
+  input[type=submit],button {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 100px;
+    margin: 10px auto;
+  }
+}

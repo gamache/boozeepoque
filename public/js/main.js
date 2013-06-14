@@ -1,29 +1,29 @@
 $(function(){
   var first_run = true,
       show_section = function show_section (section) {
-    // show only this section
-    $('#main > div').addClass('offscreen');
-    $('#' + section).removeClass('offscreen');
-    $('#' + section).show();
+        // show only this section
+        $('#main > div').addClass('offscreen');
+        $('#' + section).removeClass('offscreen');
+        $('#' + section).show();
 
-    // mark this section as selected in the nav
-    $('nav a').removeClass('selected');
-    $('nav a[href="#' + section + '"]').addClass('selected');
+        // mark this section as selected in the nav
+        $('nav a').removeClass('selected');
+        $('nav a[href="#' + section + '"]').addClass('selected');
 
-    // add section name class to #main-container
-    if (! $('#main-container').hasClass(section)) {
-      $('#main-container').removeClass()
-                          .addClass('transition')
-                          .addClass(section);
-    }
+        // add section name class to #main-container
+        if (! $('#main-container').hasClass(section)) {
+          $('#main-container').removeClass()
+                              .addClass('transition')
+                              .addClass(section);
+        }
 
-    // retitle the page
-    var title = 'Booze Époque';
-    if (section != 'home') {
-      title += ' - ' + section.charAt(0).toUpperCase() + section.slice(1);
-    }
-    document.title = title;
-  };
+        // retitle the page
+        var title = 'Booze Époque';
+        if (section != 'home') {
+          title += ' - ' + section.charAt(0).toUpperCase() + section.slice(1);
+        }
+        document.title = title;
+      };
 
 
   // site navigation is implemented with popState and pushState
@@ -69,5 +69,12 @@ $(function(){
 
   // remove initial .hidden from non-#home sections
   $('#main > div').removeClass('hidden');
+
+  function validate_event_inquiry () {
+    if ($('#event_inquiry_name').val() == '' ||
+        $('#event_inquiry_email').val() == '')
+      return false;
+  }
+  $('#submit-event-inquiry').click(validate_event_inquiry);
 
 });

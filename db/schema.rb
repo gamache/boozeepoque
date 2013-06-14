@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20130609152550) do
     t.string   "how_many_specialty_drinks"
     t.string   "budget"
     t.string   "serving_beer_and_wine"
+    t.string   "event_description"
+    t.string   "bar_setup"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
