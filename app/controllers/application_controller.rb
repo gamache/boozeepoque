@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   def index
     @event_inquiry = EventInquiry.new
+    @contact = Contact.new
     @photos = %w( babeation.jpg julep.jpg smokinboles.jpg
                   battedlashes.jpg kitchensurfing.jpg solsticepunch.jpg
                   bloodorangedrink.jpg launchharmpour.jpg starsatnight.jpg
@@ -27,10 +28,18 @@ class ApplicationController < ActionController::Base
   end
 
   def event_inquiry
-    pp @inq = EventInquiry.create(event_inquiry_params)
+    @inq = EventInquiry.create(event_inquiry_params)
     respond_to do |format|
       format.html {redirect_to '/'}
       format.json {render json: @inq, status: 201}
+    end
+  end
+
+  def contact
+    @contact = Contact.create(contact_params)
+    respond_to do |format|
+      format.html {redirect_to '/'}
+      format.json {render json: @contact, status: 201}
     end
   end
 
@@ -38,6 +47,10 @@ private
 
   def event_inquiry_params
     params.require(:event_inquiry).permit(EventInquiry::PARAMS)
+  end
+
+  def contact_params
+    params.require(:contact).permit(Contact::PARAMS)
   end
 
 end

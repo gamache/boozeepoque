@@ -14,6 +14,8 @@ class EventInquiry < ActiveRecord::Base
     how_many_specialty_drinks
     budget
     serving_beer_and_wine
+    event_description
+    bar_setup
   )
 
   validates_presence_of :name, :email

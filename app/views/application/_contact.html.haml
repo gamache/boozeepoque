@@ -10,7 +10,7 @@
     below. Once we receive your form we will contact you via email to discuss
     additional details.
 
-  = form_for @event_inquiry, url: event_inquiry_path do |f|
+  = form_for @event_inquiry, id: 'event-inquiry-form', url: event_inquiry_path do |f|
     %label.required
       Name
       = f.text_field :name

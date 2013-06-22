@@ -92,8 +92,30 @@
     if ($('#event_inquiry_name').val() == '' ||
         $('#event_inquiry_email').val() == '')
       return false;
+
+    return true
   }
-  $(function(){ $('#submit-event-inquiry').click(validate_event_inquiry); });
+  function submit_event_inquiry () {
+    if (! validate_event_inquiry()) {
+      alert("You must provide at least your name and email address.");
+    }
+    else {
+      $.ajax('/event_inquiry', {
+        type: 'post',
+        headers: {
+          'X-Transaction': 'POST Example',
+          'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+        },
+        data: $('#new_event_inquiry').serialize(),
+        success: function () {
+          alert("Thank you! Your event inquiry has been submitted.");
+        }
+      });
+    }
+
+    return false;
+  }
+  $(function(){ $('#submit-event-inquiry').click(submit_event_inquiry); });
 
 
 
