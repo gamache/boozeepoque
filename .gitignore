@@ -5,3 +5,6 @@
 /db/*.sqlite3-journal
 /log
 /tmp
+/public/assets
+restart.sh
+
