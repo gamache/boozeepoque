@@ -1,5 +1,9 @@
 #photos.offscreen
 
+  %p &nbsp;
+  %p &nbsp;
+  %p &nbsp;
+
   #galleria
     = raw @photos.shuffle.map{|file| %Q{<li><img src="/images/gallery/#{file}" data-image="/images/gallery/#{file}" alt="#{file}" />} }.join("\n")
 
@@ -21,5 +25,13 @@
           run_when_photos_visible(function(){ galleria.next() });
         }
       });
+    });
 
+    // Sometimes the galleria doesn't size correctly when #photos is the
+    // first page loaded.  This takes care of that.
+    $(function(){
+      setTimeout(function () {
+        var galleria = $('#galleria').data('galleria');
+        galleria.updateCarousel();
+      }, 250);
     });

@@ -1,29 +1,37 @@
 $(function(){
-  var first_run = true,
-      show_section = function show_section (section) {
-        // show only this section
-        $('#main > div').addClass('offscreen');
-        $('#' + section).removeClass('offscreen');
-        $('#' + section).show();
+  function show_section (section) {
+    // hide other sections
+    $('#main > div').addClass('offscreen');
 
-        // mark this section as selected in the nav
-        $('nav a').removeClass('selected');
-        $('nav a[href="#' + section + '"]').addClass('selected');
+    // show this section
+    if (section == 'photos') {
+      // special case, apologies.
+      $('#galleria').hide();
+      $('#photos').removeClass('offscreen').show();
+      $('#galleria').show({});
+    } else {
+      $('#' + section).removeClass('offscreen');
+      $('#' + section).show();
+    }
 
-        // add section name class to #main-container
-        if (! $('#main-container').hasClass(section)) {
-          $('#main-container').removeClass()
-                              .addClass('transition')
-                              .addClass(section);
-        }
+    // mark this section as selected in the nav
+    $('nav a').removeClass('selected');
+    $('nav a[href="#' + section + '"]').addClass('selected');
 
-        // retitle the page
-        var title = 'Booze Époque';
-        if (section != 'home') {
-          title += ' - ' + section.charAt(0).toUpperCase() + section.slice(1);
-        }
-        document.title = title;
-      };
+    // add section name class to #main-container
+    if (! $('#main-container').hasClass(section)) {
+      $('#main-container').removeClass()
+                          .addClass('transition')
+                          .addClass(section);
+    }
+
+    // retitle the page
+    var title = 'Booze Époque';
+    if (section != 'home') {
+      title += ' - ' + section.charAt(0).toUpperCase() + section.slice(1);
+    }
+    document.title = title;
+  };
 
 
   // site navigation is implemented with popState and pushState
