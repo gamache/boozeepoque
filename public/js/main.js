@@ -171,10 +171,13 @@
 
     // Sometimes the galleria doesn't size correctly when #photos is the
     // first page loaded.  This takes care of that.
-    setTimeout(function () {
-      var galleria = $('#galleria').data('galleria');
-      galleria.updateCarousel();
-    }, 250);
+    function update_galleria () {
+      run_when_photos_visible(function(){
+        var galleria = $('#galleria').data('galleria');
+        galleria.updateCarousel();
+      })
+    }
+    setTimeout(update_galleria, 1000);
   });
 
 })();
