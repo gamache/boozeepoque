@@ -184,7 +184,12 @@ img.brunette { right: -15%; }
 
 #main > #classes {
   .event {
-    margin: 10px auto;
+    text-align: left;
+    margin: 30px auto;
+    .pay {
+      display: inline-block;
+      float: right;
+    }
   }
 }
 
@@ -244,7 +249,6 @@ img.brunette { right: -15%; }
 
 #main > #contact {
   text-align: left;
-  padding-left: 10px;
 
   p, label {
     display: block;
