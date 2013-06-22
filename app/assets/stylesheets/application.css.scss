@@ -95,10 +95,10 @@ $main_width: 640px;
   text-overflow: ellipsis;
   width: $main_width;
   margin: 0px auto 20px auto;
-  padding: 10px 0px;
+  padding: 10px 10px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   h1,h2,h3,h4,p {
-    padding: 10px;
+    padding: 10px 0px;
     & > div {
       display: block;
     }
@@ -235,7 +235,6 @@ img.brunette { right: -15%; }
     display: block;
     margin-top: 20px;
     margin-bottom: 40px;
-    padding-left: 10px;
     .where {
       display: block;
       font-weight: bold;
