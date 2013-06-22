@@ -7,31 +7,3 @@
   #galleria
     = raw @photos.shuffle.map{|file| %Q{<li><img src="/images/gallery/#{file}" data-image="/images/gallery/#{file}" alt="#{file}" />} }.join("\n")
 
-  :javascript
-    $(function(){
-      Galleria.loadTheme('/js/galleria.classic.js');
-      Galleria.run('#galleria');
-
-      function run_when_photos_visible (fn) {
-        $('nav a.selected[href="#photos"]').each(fn);
-      }
-
-      var galleria = $('#galleria').data('galleria');
-      $(document).keyup(function(e){
-        if (e.keyCode == 37) {      // left arrow
-          run_when_photos_visible(function(){ galleria.prev() });
-        }
-        else if (e.keyCode == 39) { // right arrow
-          run_when_photos_visible(function(){ galleria.next() });
-        }
-      });
-    });
-
-    // Sometimes the galleria doesn't size correctly when #photos is the
-    // first page loaded.  This takes care of that.
-    $(function(){
-      setTimeout(function () {
-        var galleria = $('#galleria').data('galleria');
-        galleria.updateCarousel();
-      }, 250);
-    });

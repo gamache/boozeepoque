@@ -1,4 +1,6 @@
-$(function(){
+(function(){
+  //// Navigation: show_section, handle_popstate, and hooks
+
   function show_section (section) {
     // hide other sections
     $('#main > div').addClass('offscreen');
@@ -31,11 +33,11 @@ $(function(){
       title += ' - ' + section.charAt(0).toUpperCase() + section.slice(1);
     }
     document.title = title;
-  };
+  }
 
 
   // site navigation is implemented with popState and pushState
-  var handle_popstate = function(e) {
+  function handle_popstate (e) {
     var section = e.state ? e.state['section'] : null;
     if (section) {
       // This is a popState event from hitting the Back button.  There will
@@ -52,37 +54,76 @@ $(function(){
         setTimeout(function(){window.scrollTo(0,0)}, 0);
       }
     }
-  };
-  window.onpopstate = handle_popstate;
+  }
 
-  // install handlers for section links and top logo
-  $('nav a, a.to_section').click(function(){
-    var section = this.getAttribute('href').slice(1);  // discard leading '#'
-    history.pushState({section: section}, '', '#'+section);
-    show_section(section);
-    return false;
+  $(function(){
+    window.onpopstate = handle_popstate;
+
+    // install handlers for section links and top logo
+    $('nav a, a.to_section').click(function(){
+      var section = this.getAttribute('href').slice(1);  // discard leading '#'
+      history.pushState({section: section}, '', '#'+section);
+      show_section(section);
+      return false;
+    });
+    $('#main > h1').click(function(){
+      show_section('home');
+    });
+
+    // if #section present, show it
+    var url = document.location.toString(),
+          x = url.indexOf('#'),
+        sec = '';
+    if (x > -1) sec = url.slice(x+1);
+    if (sec == '') sec = 'home';
+    show_section(sec);
+    setTimeout(function(){window.scrollTo(0,0);}, 0);
+
+    // remove initial .hidden from non-#home sections
+    $('#main > div').removeClass('hidden');
   });
-  $('#main > h1').click(function(){
-    show_section('home');
-  });
 
-  // if #section present, show it
-  var url = document.location.toString(),
-      x = url.indexOf('#'),
-      sec = '';
-  if (x > -1) sec = url.slice(x+1);
-  if (sec == '') sec = 'home';
-  show_section(sec);
-  setTimeout(function(){window.scrollTo(0,0);}, 0);
 
-  // remove initial .hidden from non-#home sections
-  $('#main > div').removeClass('hidden');
+
+
+  //// Contact form validation
 
   function validate_event_inquiry () {
     if ($('#event_inquiry_name').val() == '' ||
         $('#event_inquiry_email').val() == '')
       return false;
   }
-  $('#submit-event-inquiry').click(validate_event_inquiry);
+  $(function(){ $('#submit-event-inquiry').click(validate_event_inquiry); });
 
-});
+
+
+
+  //// Galleria stuff
+
+  function run_when_photos_visible (fn) {
+    $('nav a.selected[href="#photos"]').each(fn);
+  }
+
+  $(function(){
+    Galleria.loadTheme('/js/galleria.classic.js');
+    Galleria.run('#galleria');
+
+    var galleria = $('#galleria').data('galleria');
+    $(document).keyup(function(e){
+      if (e.keyCode == 37) {      // left arrow
+        run_when_photos_visible(function(){ galleria.prev() });
+      }
+      else if (e.keyCode == 39) { // right arrow
+        run_when_photos_visible(function(){ galleria.next() });
+      }
+    });
+
+    // Sometimes the galleria doesn't size correctly when #photos is the
+    // first page loaded.  This takes care of that.
+    setTimeout(function () {
+      var galleria = $('#galleria').data('galleria');
+      galleria.updateCarousel();
+    }, 250);
+  });
+
+})();
