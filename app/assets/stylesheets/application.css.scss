@@ -219,6 +219,25 @@ img.brunette { right: -15%; }
   }
 }
 
+#main > #press {
+  text-align: left;
+  .blurb {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+    .where {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    blockquote {
+      font-style: italic;
+      padding-left: 20px;
+    }
+  }
+}
+
 #main > #contact {
   text-align: left;
   p, label {
