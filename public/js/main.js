@@ -155,6 +155,18 @@
     $('nav a.selected[href="#photos"]').each(fn);
   }
 
+  // Sometimes the galleria doesn't size correctly when #photos is the
+  // first page loaded.  This takes care of that.
+  var height = $(document).height() * 0.8,
+      width  = $(document).width() * 0.8;
+  function update_galleria () {
+    run_when_photos_visible(function(){
+      var galleria = $('#galleria').data('galleria');
+      galleria.resize({width: width, height: height});
+    })
+  }
+  update_galleria();
+
   $(function(){
     Galleria.loadTheme('/js/galleria.classic.js');
     Galleria.run('#galleria');
@@ -169,15 +181,6 @@
       }
     });
 
-    // Sometimes the galleria doesn't size correctly when #photos is the
-    // first page loaded.  This takes care of that.
-    function update_galleria () {
-      run_when_photos_visible(function(){
-        var galleria = $('#galleria').data('galleria');
-        galleria.updateCarousel();
-      })
-    }
-    setTimeout(update_galleria, 1000);
   });
 
 })();
