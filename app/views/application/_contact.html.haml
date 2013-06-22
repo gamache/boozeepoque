@@ -4,74 +4,93 @@
     private class please contact us at
     <a target='_blank' href='events@boozeepoque.com'>events@boozeepoque.com</a>.
 
+  %br
+
+  %p
+    If you'd like to join the Booze Époque mailing list, sign up here!
+
+  .contact-form
+    = form_for @contact, url: contact_path do |f|
+      %label.required
+        Name
+        = f.text_field :name
+      %label.required
+        Email
+        = f.text_field :email
+      %br
+      = f.submit 'Join Mailing List', id: 'submit-contact'
+
+  %br
+
   %p
     If you would
     like to hire us for a specific event please fill out the inquiry form
     below. Once we receive your form we will contact you via email to discuss
     additional details.
 
-  = form_for @event_inquiry, id: 'event-inquiry-form', url: event_inquiry_path do |f|
-    %label.required
-      Name
-      = f.text_field :name
+  .event-inquiry-form
+    = form_for @event_inquiry, url: event_inquiry_path do |f|
+      %label.required
+        Name
+        = f.text_field :name
 
-    %label.required
-      Email Address
-      = f.text_field :email
+      %label.required
+        Email
+        = f.text_field :email
 
-    %label 
-      Business/Company
-      = f.text_field :company
+      %label 
+        Business/Company
+        = f.text_field :company
 
-    %label 
-      Phone Number
-      = f.text_field :phone
+      %label 
+        Phone Number
+        = f.text_field :phone
 
-    %label 
-      Date of Event
-      = f.text_field :event_date
+      %label 
+        Date of Event
+        = f.text_field :event_date
 
-    %label 
-      Type of Event
-      = f.text_field :event_type
+      %label 
+        Type of Event
+        = f.text_field :event_type
 
-    %label 
-      Venue (if known)
-      = f.text_field :venue
+      %label 
+        Venue (if known)
+        = f.text_field :venue
 
-    %label 
-      Event Time
-      = f.text_field :event_time
+      %label 
+        Event Time
+        = f.text_field :event_time
 
-    %label 
-      Number of Hours Requiring Booze Époque Services (between 2-5)
-      = f.text_field :hours_required
+      %label 
+        Number of Hours Requiring Booze Époque Services (between 2-5)
+        = f.text_field :hours_required
 
-    %label 
-      Number of Attendees
-      = f.text_field :attendees
+      %label 
+        Number of Attendees
+        = f.text_field :attendees
 
-    %label 
-      Do you plan to have a cash bar or open bar?
-      = f.text_field :cash_or_open_bar
+      %label 
+        Do you plan to have a cash bar or open bar?
+        = f.text_field :cash_or_open_bar
 
-    %label 
-      How many specialty drinks would you like us to create (menus typically range from 2 - 10 different drinks)?
-      = f.text_field :how_many_specialty_drinks
+      %label 
+        How many specialty drinks would you like us to create (menus typically range from 2 - 10 different drinks)?
+        = f.text_field :how_many_specialty_drinks
 
-    %label 
-      Is there a specific budget you're working within?
-      = f.text_field :budget
+      %label 
+        Is there a specific budget you're working within?
+        = f.text_field :budget
 
-    %label 
-      Will you be serving beer and wine?
-      = f.text_field :serving_beer_and_wine
+      %label 
+        Will you be serving beer and wine?
+        = f.text_field :serving_beer_and_wine
 
-    %p Event Description (please tell us a little bit more about the nature of your event)
-    = f.text_area :event_description
+      %p Event Description (please tell us a little bit more about the nature of your event)
+      = f.text_area :event_description
 
-    %p Bar Set-up (please let us know if you have specific needs for bar set-up or have knowledge of the room layout)
-    = f.text_area :bar_setup
+      %p Bar Set-up (please let us know if you have specific needs for bar set-up or have knowledge of the room layout)
+      = f.text_area :bar_setup
 
-    %br
-    = f.submit 'Submit', id: 'submit-event-inquiry'
+      %br
+      = f.submit 'Submit Event Inquiry', id: 'submit-event-inquiry'

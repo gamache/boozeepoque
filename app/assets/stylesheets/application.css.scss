@@ -244,9 +244,16 @@ img.brunette { right: -15%; }
 
 #main > #contact {
   text-align: left;
+  padding-left: 10px;
+
   p, label {
     display: block;
     margin: 40px 0px 10px 0px;;
+  }
+  .contact-form {
+    p, label {
+      margin: 10px 0px;
+    }
   }
 
   input[type=text] {

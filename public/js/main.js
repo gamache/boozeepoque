@@ -118,6 +118,35 @@
   $(function(){ $('#submit-event-inquiry').click(submit_event_inquiry); });
 
 
+  function validate_contact () {
+    if ($('#contact_name').val() == '' || $('#contact_email').val() == '')
+      return false;
+    return true
+  }
+  function submit_contact () {
+    if (! validate_contact()) {
+      alert("You must provide at least your name and email address.");
+    }
+    else {
+      $.ajax('/contact', {
+        type: 'post',
+        headers: {
+          'X-Transaction': 'POST Example',
+          'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+        },
+        data: $('#new_contact').serialize(),
+        success: function () {
+          alert("Thank you! Your contact has been submitted.");
+        }
+      });
+    }
+
+    return false;
+  }
+  $(function(){ $('#submit-contact').click(submit_contact); });
+
+
+
 
 
   //// Galleria stuff
