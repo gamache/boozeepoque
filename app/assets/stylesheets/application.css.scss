@@ -76,7 +76,7 @@ footer {
 #main-container {
   text-align: center;
   position: relative;
-  top: 25px;
+  top: 0px; //25px;
 }
 
 #main-container.home {
@@ -125,6 +125,10 @@ img.brunette { right: -15%; }
     max-width: $main_width - 40px;
     margin: 10px auto;
   }
+}
+
+#main > #home {
+  padding-top: 40px;
 }
 
 #main > #about {
