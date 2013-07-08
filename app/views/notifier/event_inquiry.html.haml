@@ -1,0 +1,13 @@
+!!! 5
+%html
+  %head
+    %style
+      p { margin-bottom: 20px; }
+  %body
+    -@event_inquiry.attributes.each do |attr,val|
+      %p
+        %b
+          = attr
+        %br
+        = val
+
