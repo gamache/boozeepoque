@@ -29,6 +29,7 @@ class ApplicationController < ActionController::Base
 
   def event_inquiry
     @inq = EventInquiry.create(event_inquiry_params)
+    Notifier.event_inquiry(@inq).deliver
     respond_to do |format|
       format.html {redirect_to '/'}
       format.json {render json: @inq, status: 201}

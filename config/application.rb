@@ -21,5 +21,6 @@ module BoozeEpoque
     # config.i18n.default_locale = :de
 
     config.cache_store = :memory_store
+    config.action_mailer.smtp_settings = {openssl_verify_mode: 'none'}
   end
 end
