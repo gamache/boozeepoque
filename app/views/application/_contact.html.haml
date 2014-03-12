@@ -92,5 +92,9 @@
       %p Bar Set-up (please let us know if you have specific needs for bar set-up or have knowledge of the room layout)
       = f.text_area :bar_setup
 
+      %label.required
+        As an anti-spam measure, please type "booze" here:
+        <input type="text" name="booze">
+
       %br
       = f.submit 'Submit Event Inquiry', id: 'submit-event-inquiry'
