@@ -8,12 +8,14 @@
     // show this section
     if (section == 'photos') {
       // special case, apologies.
+      $('.corner-buttons').hide();
       $('#galleria').hide();
       $('#photos').removeClass('offscreen').show();
       $('#galleria').show({});
     } else {
       $('#' + section).removeClass('offscreen');
       $('#' + section).show();
+      $('.corner-buttons').show();
     }
 
     // mark this section as selected in the nav
