@@ -131,6 +131,19 @@ img.brunette { right: -15%; }
   padding-top: 40px;
 }
 
+.corner-buttons {
+  position: relative;
+  bottom: -20px;
+  right: 0px;
+  text-align: right;
+  a > img {
+    height: 30px;
+    width: 30px;
+    display: inline;
+  }
+  a { display: inline; }
+}
+
 #main > #about {
   img.ginger {
     width: 600px;
