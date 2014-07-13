@@ -8,23 +8,6 @@ class ApplicationController < ActionController::Base
   def index
     @event_inquiry = EventInquiry.new
     @contact = Contact.new
-    #@photos = %w( babeation.jpg julep.jpg smokinboles.jpg
-                  #battedlashes.jpg kitchensurfing.jpg solsticepunch.jpg
-                  #bloodorangedrink.jpg launchharmpour.jpg starsatnight.jpg
-                  #bostondotcomdrink.jpg lingosmenu.jpg strawberryholly.jpg
-                  #cognaccompharm.jpg lingossetup.jpg swaneebday.jpg
-                  #cognaccompmeg.jpg manhattan.jpg swirlandslice.jpg
-                  #donjuliocomp.jpg milowsky.jpg tableandtulipmh.jpg
-                  #equinoxpunch.jpg mojitos.jpg tikinight.png
-                  #equinoxpunch2.jpg molassesrocker.jpg tomwaitsdrink.jpg
-                  #freshmint.jpg morninggloryfarm.jpg tools.jpg
-                  #grapefruitpunch.jpg noreaster.jpg ttginpour.jpg
-                  #haireparty.jpg peachykeen.jpg ttinvite.jpg
-                  #halloween.jpg picklebacktoast.jpg ttmenu.png
-                  #harmcognac.jpg porchdrink.jpg virginwatermelon.jpg
-                  #herbgarden.jpg robertsshower.jpg watermelonmarg.jpg
-                  #hoedown.jpg singriaandlemonade.jpg
-                  #hoedownmenu.jpg slutcrackersweet.jpg )
     @photos = %w(
       1013078_511275678945792_460605884_n.jpg
       1013854_623380264401999_1288627179_n.jpg
@@ -55,6 +38,15 @@ class ApplicationController < ActionController::Base
       971065_498272836912743_1972106414_n.jpg
       998525_514222188651141_595959324_n.jpg
       NationalMargaritaDay.jpg
+      flowercocktails.jpg
+      fourthofjuly.jpg
+      gardentoglass.jpg
+      gelology.jpg
+      harmteaching.jpg
+      mccjennifermitchell.jpg
+      millcitygrows2.jpg
+      millcitygrowsdrink.jpg
+      tikitenticles.jpg
     )
   end
 
