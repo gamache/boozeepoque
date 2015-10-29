@@ -35,13 +35,9 @@
         %nav
           %a(href='#about') about
           |
-          %a(href='#blog') blog
-          |
           %a(href='#photos') photos
           |
           %a(href='#menus') menus
-          |
-          %a(href='#events') events
           |
           %a(href='#classes') classes
           |
@@ -61,15 +57,9 @@
 
         = render partial: 'about'
 
-        // filled in by feedeater
-        #blog.hidden
-
         = render partial: 'photos'
 
         = render partial: 'menus'
-
-        // filled in by feedeater
-        #events.hidden
 
         = render partial: 'classes'
 
@@ -105,19 +95,7 @@
 
     %script(src='js/main.js')
 
-
-    %script(src='js/tumblr-feedeater.js')
-
-    // blog
-    %script(src='http://boozeepoque.tumblr.com/api/read/json?num=50')
     :javascript
-      FEEDEATER.render_posts({target: '#blog'});
-
-    // events
-    %script(src='http://beevents.tumblr.com/api/read/json?num=50')
-    :javascript
-      FEEDEATER.render_posts({target: '#events'});
-
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-31731034-1']);
       _gaq.push(['_setDomainName', 'boozeepoque.com']);
