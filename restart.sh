@@ -1,4 +1,4 @@
 #!/bin/bash
-rake assets:precompile
+bundle exec rake assets:precompile
 touch tmp/restart.txt
 
